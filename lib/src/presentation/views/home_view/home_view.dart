@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_design/src/presentation/views/cart_view/cart_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -23,14 +24,19 @@ class HomeView extends StatelessWidget {
                         Text('What would you buy today'),
                       ],
                     ),
-                    Container(
-                      padding: const EdgeInsets.all(15),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.green,
-                      ),
-                      child: const Icon(
-                        Icons.card_travel,
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, CartView.id);
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.green,
+                        ),
+                        child: const Icon(
+                          Icons.card_travel,
+                        ),
                       ),
                     ),
                   ],
