@@ -73,16 +73,14 @@ class ItemsCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        vertical: 10,
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-      ),
+      padding: const EdgeInsets.only(bottom: 20),
       child: ListTile(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
         tileColor: const Color(0xFFE2EAFF),
         contentPadding: const EdgeInsets.symmetric(
-          vertical: 10,
+          vertical: 13.5,
           horizontal: 10,
         ),
         leading: Container(
