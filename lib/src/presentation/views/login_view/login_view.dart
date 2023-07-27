@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_design/src/presentation/views/signup_view/signup_view.dart';
 import 'package:grocery_design/src/presentation/views/splash_view/splash_view.dart';
+import 'package:grocery_design/src/utils/constants.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -32,9 +33,7 @@ class LoginView extends StatelessWidget {
               height: 150,
               width: 150,
             ),
-            const SizedBox(
-              height: 50,
-            ),
+            50.height,
             const FieldWithText(
               text: 'Email Address',
               hintText: 'aakash.panwar7073@gmail.com',
@@ -48,9 +47,7 @@ class LoginView extends StatelessWidget {
               'Forgot Password?',
               textAlign: TextAlign.right,
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            20.height,
             ButtonElevated(
               divideby: 1.1,
               text: 'Sign In',
@@ -58,9 +55,7 @@ class LoginView extends StatelessWidget {
                 print('Button Pressed Sign Up');
               },
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            20.height,
             const Text(
               'Or',
               style: TextStyle(
@@ -68,9 +63,7 @@ class LoginView extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            20.height,
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -81,9 +74,7 @@ class LoginView extends StatelessWidget {
                     print('Button Pressed G');
                   },
                 ),
-                const SizedBox(
-                  width: 20,
-                ),
+               20.height,
                 ButtonElevated(
                   divideby: 8,
                   text: 'I',
@@ -91,9 +82,7 @@ class LoginView extends StatelessWidget {
                     print('Button Pressed I');
                   },
                 ),
-                const SizedBox(
-                  width: 20,
-                ),
+               20.height,
                 ButtonElevated(
                   divideby: 8,
                   text: 'T',
@@ -103,9 +92,7 @@ class LoginView extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            20.height,
             RichText(
               text: const TextSpan(
                 style: TextStyle(

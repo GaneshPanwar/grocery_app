@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_design/src/presentation/views/home_view/home_view.dart';
 import 'package:grocery_design/src/presentation/views/splash_view/splash_view.dart';
+import 'package:grocery_design/src/utils/constants.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
@@ -95,9 +96,7 @@ class SignUpView extends StatelessWidget {
                 Navigator.pushNamed(context, HomeView.id);
               },
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            20.height,
             const Text(
               'Or',
               style: TextStyle(
@@ -105,9 +104,7 @@ class SignUpView extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            20.height,
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -118,9 +115,7 @@ class SignUpView extends StatelessWidget {
                     print('Button Pressed G');
                   },
                 ),
-                const SizedBox(
-                  width: 20,
-                ),
+                20.height,
                 ButtonElevated(
                   divideby: 8,
                   text: 'I',
@@ -128,9 +123,7 @@ class SignUpView extends StatelessWidget {
                     print('Button Pressed I');
                   },
                 ),
-                const SizedBox(
-                  width: 20,
-                ),
+                20.height,
                 ButtonElevated(
                   divideby: 8,
                   text: 'T',
@@ -140,9 +133,7 @@ class SignUpView extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            20.height,
             RichText(
               text: const TextSpan(
                 style: TextStyle(

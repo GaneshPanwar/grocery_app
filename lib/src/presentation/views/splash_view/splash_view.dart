@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_design/src/presentation/views/login_view/login_view.dart';
 import 'package:grocery_design/src/presentation/views/signup_view/signup_view.dart';
+import 'package:grocery_design/src/utils/constants.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
@@ -16,9 +17,7 @@ class SplashView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: 150,
-              ),
+              150.height,
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -27,9 +26,7 @@ class SplashView extends StatelessWidget {
                 height: 150,
                 width: 150,
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              20.height,
               Text(
                 'Grocery App',
                 style: Theme.of(context).textTheme.headlineMedium!.apply(
@@ -39,9 +36,7 @@ class SplashView extends StatelessWidget {
               const Text(
                 'Do not sell or share my personal information',
               ),
-              const SizedBox(
-                height: 80,
-              ),
+              80.height,
               ButtonElevated(
                 divideby: 1.2,
                 text: 'Get Started',
@@ -49,9 +44,7 @@ class SplashView extends StatelessWidget {
                   Navigator.pushNamed(context, SignUpView.id);
                 },
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              10.height,
               ButtonElevated(
                 divideby: 1.2,
                 text: 'Sign In',
