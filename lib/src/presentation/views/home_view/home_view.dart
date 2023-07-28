@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_design/src/presentation/views/cart_view/cart_view.dart';
+import 'package:grocery_design/src/presentation/views/profile_view/profile_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -108,7 +109,9 @@ class HomeView extends StatelessWidget {
                 // ),
                 TitleWithTextButton(
                   title: 'Categories',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, ProfileView.id);
+                  },
                 ),
                 SizedBox(
                   height: 80,
