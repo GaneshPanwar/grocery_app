@@ -65,12 +65,47 @@ class HomeView extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: const Color(
-                      0xFFE2EAFF,
-                    ),
+                    // color: const Color(
+                    //   0xFFE2EAFF,
+                    // ),
                   ),
-                  height: 200,
+                  height: 160,
+                  child: ListView.builder(
+                    itemCount: 10,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: const Color(
+                            0xFFE2EAFF,
+                          ),
+                        ),
+                        height: 160,
+                        width: MediaQuery.sizeOf(context).width - 50,
+                      );
+                    },
+                  ),
                 ),
+
+                // Add Coursel Here //
+
+                // Container(
+                //   height: 20,
+                //   width: MediaQuery.sizeOf(context).width-40,
+                //   alignment: Alignment.center,
+                //   child: const SmoothIndicator(
+                //   offset: 0,
+                //   count: 3,
+                //   size: Size(5, 5),
+                //   effect: ExpandingDotsEffect(
+                //     activeDotColor: Color(0xFECAE150),
+                //     dotColor: Color(0xFF4CAF50),
+                //     expansionFactor: 2,
+                //   ),
+                // ),
+                // ),
                 TitleWithTextButton(
                   title: 'Categories',
                   onPressed: () {},
@@ -126,6 +161,29 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: const [
+          BottomNavigationBarItem(
+            label: 'Home',
+            icon: Icon(
+              Icons.home,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: 'Scanner',
+            icon: Icon(
+              Icons.scanner,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: 'Profile',
+            icon: Icon(
+              Icons.account_box,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -145,7 +203,9 @@ class TitleWithTextButton extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(title),
+        Text(
+          title,
+        ),
         TextButton(
           onPressed: onPressed,
           child: const Text('See All'),

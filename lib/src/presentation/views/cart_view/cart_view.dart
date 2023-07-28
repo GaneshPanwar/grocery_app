@@ -23,41 +23,69 @@ class CartView extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
+        child: Column(
+          children: [
+            SingleChildScrollView(
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                      ),
+                      margin: const EdgeInsets.symmetric(
+                        vertical: 20,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(width: 1),
+                      ),
+                      width: MediaQuery.sizeOf(context).width / 1.1,
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          prefixIcon: Icon(Icons.search),
+                          fillColor: Color(0xFF1FC448),
+                          border: InputBorder.none,
+                          hintText: 'Search by items',
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: MediaQuery.sizeOf(context).height - 60,
+                      child: ListView.builder(
+                        itemCount: 20,
+                        itemBuilder: (context, index) {
+                          return const ItemsCart();
+                        },
+                      ),
+                    ),
+                  ],
                 ),
-                margin: const EdgeInsets.symmetric(
-                  vertical: 20,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(width: 1),
-                ),
-                width: MediaQuery.sizeOf(context).width / 1.1,
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                    prefixIcon: Icon(Icons.search),
-                    fillColor: Color(0xFF1FC448),
-                    border: InputBorder.none,
-                    hintText: 'Search by items',
+              ),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        onPressed: () => {},
+        label: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            color: const Color(0xFF10802C),
+          ),
+          height: 60,
+          width: MediaQuery.sizeOf(context).width - 60,
+          child: Center(
+            child: Text(
+              'BUY',
+              style: Theme.of(context).textTheme.headlineSmall!.apply(
+                    color: Colors.white,
+                    fontWeightDelta: 2,
                   ),
-                ),
-              ),
-              SizedBox(
-                height: MediaQuery.sizeOf(context).height,
-                child: ListView.builder(
-                  itemCount: 20,
-                  itemBuilder: (context, index) {
-                    return const ItemsCart();
-                  },
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),
@@ -105,7 +133,7 @@ class ItemsCart extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: const Icon(
-                  Icons.minimize_rounded,
+                  Icons.remove,
                   size: 20,
                 ),
               ),
