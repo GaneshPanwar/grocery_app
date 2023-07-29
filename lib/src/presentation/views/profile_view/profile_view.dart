@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_design/src/data/profile_view/profile_view_data.dart';
 import 'package:grocery_design/src/utils/constants.dart';
 
 class ProfileView extends StatelessWidget {
@@ -33,26 +34,29 @@ class ProfileView extends StatelessWidget {
                 SizedBox(
                   height: MediaQuery.sizeOf(context).height - 300,
                   child: ListView.builder(
-                    
-                    itemCount: 6,
+                    itemCount: profileData.length,
                     itemBuilder: (context, index) {
-                      return ListTile(contentPadding: const EdgeInsets.symmetric(vertical: 10),
+                      return ListTile(
+                        contentPadding:
+                            const EdgeInsets.symmetric(vertical: 10),
                         leading: Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: const Color(0xFFFFF8BB),
+                            borderRadius: BorderRadius.circular(15),
+                            color: profileData[index]['container_color'],
                           ),
                           height: 80,
                           width: 60,
-                          child: const Icon(
-                            Icons.location_on_outlined,
-                            color: Color(0xFFE2D352),
+                          child: Icon(
+                            profileData[index]['icon'],
+                            color: profileData[index]['icon_color'],
                             size: 30,
                           ),
                         ),
-                        title: const Text(
-                          'My Address',
-                          style: TextStyle(fontWeight: FontWeight.w900),
+                        title: Text(
+                          profileData[index]['title'],
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w900,
+                          ),
                         ),
                       );
                     },
