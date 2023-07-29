@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_design/src/presentation/views/cart_view/cart_view.dart';
 import 'package:grocery_design/src/presentation/views/profile_view/profile_view.dart';
+import 'package:grocery_design/src/presentation/widgets/custom_bottom_nav/custom_bottom_nav.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -133,7 +134,9 @@ class HomeView extends StatelessWidget {
                 ),
                 TitleWithTextButton(
                   title: 'Best Sellers',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, CustomBottomNav.id);
+                  },
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -164,29 +167,31 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(
-            label: 'Home',
-            icon: Icon(
-              Icons.home,
-            ),
-          ),
-          BottomNavigationBarItem(
-            label: 'Scanner',
-            icon: Icon(
-              Icons.scanner,
-            ),
-          ),
-          BottomNavigationBarItem(
-            label: 'Profile',
-            icon: Icon(
-              Icons.account_box,
-            ),
-          ),
-        ],
-      ),
+      bottomNavigationBar: const CustomBottomNav(),
+
+      // BottomNavigationBar(
+      //   type: BottomNavigationBarType.fixed,
+      //   items: const [
+      //     BottomNavigationBarItem(
+      //       label: 'Home',
+      //       icon: Icon(
+      //         Icons.home,
+      //       ),
+      //     ),
+      //     BottomNavigationBarItem(
+      //       label: 'Scanner',
+      //       icon: Icon(
+      //         Icons.scanner,
+      //       ),
+      //     ),
+      //     BottomNavigationBarItem(
+      //       label: 'Profile',
+      //       icon: Icon(
+      //         Icons.account_box,
+      //       ),
+      //     ),
+      //   ],
+      // ),
     );
   }
 }

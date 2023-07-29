@@ -18,17 +18,17 @@ class OnboardingView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              150.height,
+              200.height,
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: const Color(0xff4ad64f),
+                  // color: const Color(0xff4ad64f),
                 ),
-                height: 150,
-                width: 150,
+                height: 100,
+                width: 100,
                 child: const Icon(
                   Icons.qr_code_scanner_outlined,
-                  size: 60,
+                  size: 100,
                 ),
               ),
               20.height,

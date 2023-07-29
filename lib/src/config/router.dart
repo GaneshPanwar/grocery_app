@@ -6,11 +6,12 @@ import 'package:grocery_design/src/presentation/views/onboarding_view/onboarding
 import 'package:grocery_design/src/presentation/views/profile_view/profile_view.dart';
 import 'package:grocery_design/src/presentation/views/signup_view/signup_view.dart';
 import 'package:grocery_design/src/presentation/views/splash_view/splash_view.dart';
+import 'package:grocery_design/src/presentation/widgets/custom_bottom_nav/custom_bottom_nav.dart';
 
 /// Initial Route ///
 String initialRoute = SplashView.id;
 
-/// Routes ///
+/// Routes 
 Map<String, Widget Function(BuildContext)> routes = {
   SplashView.id: (context) => const SplashView(),
   LoginView.id: (context) => const LoginView(),
@@ -19,4 +20,5 @@ Map<String, Widget Function(BuildContext)> routes = {
   ProfileView.id: (context) => const ProfileView(),
   CartView.id: (context) => const CartView(),
   OnboardingView.id: (context) => const OnboardingView(),
+  CustomBottomNav.id:(context) => const CustomBottomNav(), 
 };

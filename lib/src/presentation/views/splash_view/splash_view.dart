@@ -41,12 +41,13 @@ class _SplashViewState extends State<SplashView> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              50.height,
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                 ),
-                height: 150,
-                width: 150,
+                height: 100,
+                width: 100,
                 child: const Icon(
                   Icons.qr_code_scanner_outlined,
                   size: 100,
@@ -58,6 +59,10 @@ class _SplashViewState extends State<SplashView> {
                 style: Theme.of(context).textTheme.headlineMedium!.apply(
                       fontWeightDelta: 2,
                     ),
+              ),
+              20.height,
+              const CircularProgressIndicator(
+                color: Colors.black,
               ),
             ],
           ),
