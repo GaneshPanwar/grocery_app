@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_design/src/presentation/views/signup_view/signup_view.dart';
-import 'package:grocery_design/src/presentation/views/splash_view/splash_view.dart';
+import 'package:grocery_design/src/presentation/widgets/button/buttons.dart';
 import 'package:grocery_design/src/utils/constants.dart';
 
 class LoginView extends StatelessWidget {
