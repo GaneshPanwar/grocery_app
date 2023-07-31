@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_design/src/presentation/views/home_view/home_view.dart';
+import 'package:grocery_design/src/presentation/widgets/custom_tab_bar/custom_bottom_nav.dart';
 import 'package:grocery_design/src/presentation/widgets/button/buttons.dart';
 import 'package:grocery_design/src/utils/constants.dart';
+
+import '../home_view/home_view.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
@@ -93,7 +95,10 @@ class SignUpView extends StatelessWidget {
               divideby: 1.1,
               text: 'Sign Up',
               onPressed: () {
-                Navigator.pushNamed(context, HomeView.id);
+                Navigator.pushNamed(
+                  context,
+                  CustomBottomNav.id,
+                );
               },
             ),
             20.height,
