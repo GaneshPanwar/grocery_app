@@ -11,8 +11,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: 
-      SafeArea(
+      body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -24,8 +23,15 @@ class HomeView extends StatelessWidget {
                     const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Hi, Alikal'),
-                        Text('What would you buy today'),
+                        Text(
+                          'Hi, Alikal',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                        Text('What would you buy today?'),
                       ],
                     ),
                     InkWell(
@@ -36,42 +42,47 @@ class HomeView extends StatelessWidget {
                         padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
-                          color: Colors.green,
+                          color: const Color(0xFF1FC448),
                         ),
                         child: const Icon(
-                          Icons.card_travel,
+                          Icons.card_travel_outlined,
+                          color: Colors.white,
                         ),
                       ),
                     ),
                   ],
                 ),
                 Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                  ),
                   margin: const EdgeInsets.symmetric(
                     vertical: 20,
                   ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1),
-                  ),
                   width: MediaQuery.sizeOf(context).width / 1.1,
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.search),
-                      fillColor: Color(0xFF1FC448),
-                      border: InputBorder.none,
-                      hintText: 'Search by items',
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        contentPadding: EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 15,
+                        ),
+                        border: InputBorder.none,
+                        filled: true,
+                        fillColor: Color(0xFFF2F6FF),
+                        prefixIcon: Icon(
+                          Icons.search,
+                        ),
+                        // border: InputBorder.none,
+                        hintText: 'Search by items',
+                        hintStyle: TextStyle(
+                          color: Color(0xFFE3E6EC),
+                        ),
+                      ),
                     ),
                   ),
                 ),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    // color: const Color(
-                    //   0xFFE2EAFF,
-                    // ),
                   ),
                   height: 160,
                   child: ListView.builder(
@@ -188,10 +199,19 @@ class TitleWithTextButton extends StatelessWidget {
       children: [
         Text(
           title,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
         ),
         TextButton(
           onPressed: onPressed,
-          child: const Text('See All'),
+          child: const Text(
+            'See All',
+            style: TextStyle(
+              color: Color(0xFFA9A9A9),
+            ),
+          ),
         ),
       ],
     );

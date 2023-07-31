@@ -19,23 +19,32 @@ class ProductsView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                ),
                 margin: const EdgeInsets.symmetric(
                   vertical: 20,
                 ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(width: 1),
-                ),
                 width: MediaQuery.sizeOf(context).width / 1.1,
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                    prefixIcon: Icon(Icons.search),
-                    fillColor: Color(0xFF1FC448),
-                    border: InputBorder.none,
-                    hintText: 'Search by items',
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      contentPadding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 15,
+                      ),
+                      border: InputBorder.none,
+                      filled: true,
+                      fillColor: Color(0xFFF2F6FF),
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: Color(0xFF000000),
+                      ),
+
+                      // border: InputBorder.none,
+                      hintText: 'Search by items',
+                      hintStyle: TextStyle(
+                        color: Color(0xFFE3E6EC),
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -46,7 +55,8 @@ class ProductsView extends StatelessWidget {
                   height: MediaQuery.sizeOf(context).height - 308,
                   width: MediaQuery.sizeOf(context).width - 100,
                   child: GridView.builder(
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       mainAxisSpacing: 22,
                       crossAxisSpacing: 22,

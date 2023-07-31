@@ -93,9 +93,10 @@ class SignUpView extends StatelessWidget {
               divideby: 1.1,
               text: 'Sign Up',
               onPressed: () {
-                Navigator.pushNamed(
+                Navigator.pushNamedAndRemoveUntil(
                   context,
                   CustomBottomNav.id,
+                  (route) => false,
                 );
               },
             ),
