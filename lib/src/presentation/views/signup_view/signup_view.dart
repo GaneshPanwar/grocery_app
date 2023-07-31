@@ -3,8 +3,6 @@ import 'package:grocery_design/src/presentation/widgets/custom_tab_bar/custom_bo
 import 'package:grocery_design/src/presentation/widgets/button/buttons.dart';
 import 'package:grocery_design/src/utils/constants.dart';
 
-import '../home_view/home_view.dart';
-
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
 
